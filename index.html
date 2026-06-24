@@ -33,6 +33,9 @@
   .gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   .gallery img{width:100%;height:230px;object-fit:cover;border-radius:10px;display:block}
   @media(max-width:560px){.hero-photo{height:230px}.gallery img{height:170px}}
+  .rooms{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+  .rooms img{width:100%;height:210px;object-fit:cover;border-radius:10px;display:block}
+  @media(max-width:560px){.rooms img{height:180px}}
 
   section{padding:46px 0}
   .quote{background:var(--paper);border-left:3px solid var(--ocean);padding:24px 28px;border-radius:0 10px 10px 0;font-style:italic;color:var(--ink-soft);font-size:1.02rem;margin:6px 0}
@@ -169,6 +172,16 @@
         </ul>
       </div>
     </div>
+  </section>
+
+  <section>
+    <h2 class="title">家的樣子</h2>
+    <div class="rooms">
+      <img src="img/room1.jpg" alt="臥室">
+      <img src="img/kitchen.jpg" alt="廚房與餐桌">
+      <img src="img/stairs.jpg" alt="通往二樓的木樓梯">
+    </div>
+    <p style="text-align:center;color:var(--ink-soft);font-size:.9rem;margin-top:14px">簡單、明亮、有木質感的小窩 —— 一個可以好好生活的地方。</p>
   </section>
 
   <section>
