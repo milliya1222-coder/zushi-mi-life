@@ -29,6 +29,10 @@
   .hero h1{font-size:2.9rem;color:var(--ink);margin-bottom:6px;letter-spacing:.04em}
   .hero .en{font-family:'Noto Serif TC',serif;font-size:1.25rem;color:var(--ocean);letter-spacing:.08em;margin-bottom:18px}
   .hero .sub{font-size:1.05rem;color:var(--ink-soft);max-width:420px;margin:0 auto}
+  .hero-photo{width:100%;height:360px;object-fit:cover;object-position:center 60%;display:block}
+  .gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .gallery img{width:100%;height:230px;object-fit:cover;border-radius:10px;display:block}
+  @media(max-width:560px){.hero-photo{height:230px}.gallery img{height:170px}}
 
   section{padding:46px 0}
   .quote{background:var(--paper);border-left:3px solid var(--ocean);padding:24px 28px;border-radius:0 10px 10px 0;font-style:italic;color:var(--ink-soft);font-size:1.02rem;margin:6px 0}
@@ -98,6 +102,8 @@
   </div>
 </header>
 
+<img class="hero-photo" src="img/hero.jpg" alt="逗子海邊的夕陽">
+
 <div class="wrap">
 
   <section>
@@ -114,6 +120,17 @@
     <p>2026 年春天，我搬到了逗子（Zushi）── 日本神奈川的一個沿海小鎮，離東京一小時。</p>
     <p>當我不在逗子的時候，我想把這個剛安頓好的小窩，留給我認識的、願意停下來慢慢生活的朋友。這不是民宿，是<strong>「朋友的家」</strong> ── 多了一份信任、多了一份在地的真實，少了一份觀光感。</p>
     <p>未來，我也想在這裡發展親子體驗、台日交流、媽媽喘息的小團體 ── 一切從這個小小的空房之約開始。</p>
+  </section>
+
+  <section>
+    <h2 class="title">逗子的日常</h2>
+    <div class="gallery">
+      <img src="img/fuji.jpg" alt="從逗子海邊望向富士山與江之島">
+      <img src="img/house.jpg" alt="家中的木樓梯與彩虹簾">
+      <img src="img/beach1.jpg" alt="孩子在海邊看夕陽">
+      <img src="img/beach2.jpg" alt="孩子赤腳走在沙灘上">
+    </div>
+    <p style="text-align:center;color:var(--ink-soft);font-size:.9rem;margin-top:14px">逗子的海、夕陽、富士山，與慢慢的日子。</p>
   </section>
 
   <section>
