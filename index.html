@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>逗子妙生活 ・ Zushi Mi Life</title>
+<meta name="description" content="把我不在的家、把我所愛的逗子日常，留給願意停下來的妳。神奈川・逗子的慢生活空房之約。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F4EDE0; --bg-soft:#EBE0CD; --paper:#FFFBF3;
+    --ink:#2E3A2F; --ink-soft:#5A6356;
+    --ocean:#6E8B7C; --ocean-deep:#57756A;
+    --terra:#C28960; --terra-deep:#A86F47;
+    --sand:#D9C49B; --gold:#B89060; --line:#D6CAB3;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Noto Sans TC',sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;font-weight:300;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Noto Serif TC',serif;font-weight:500;line-height:1.4}
+  .wrap{max-width:680px;margin:0 auto;padding:0 26px}
+
+  /* hero */
+  .hero{text-align:center;padding:74px 0 60px;background:linear-gradient(170deg,#EFE6D5 0%,#E4D6BE 100%);position:relative}
+  .hero .wave{font-size:1.8rem;color:var(--ocean);letter-spacing:.5em;margin-bottom:14px}
+  .hero .eyebrow{font-size:.78rem;letter-spacing:.32em;color:var(--terra);text-transform:uppercase;margin-bottom:16px}
+  .hero h1{font-size:2.9rem;color:var(--ink);margin-bottom:6px;letter-spacing:.04em}
+  .hero .en{font-family:'Noto Serif TC',serif;font-size:1.25rem;color:var(--ocean);letter-spacing:.08em;margin-bottom:18px}
+  .hero .sub{font-size:1.05rem;color:var(--ink-soft);max-width:420px;margin:0 auto}
+
+  section{padding:46px 0}
+  .quote{background:var(--paper);border-left:3px solid var(--ocean);padding:24px 28px;border-radius:0 10px 10px 0;font-style:italic;color:var(--ink-soft);font-size:1.02rem;margin:6px 0}
+  .quote .attr{display:block;font-style:normal;font-size:.85rem;color:var(--terra);margin-top:14px;letter-spacing:.08em}
+
+  h2.title{font-size:1.5rem;color:var(--terra);margin-bottom:16px;padding-left:14px;border-left:3px solid var(--terra)}
+  p{margin-bottom:12px}
+  strong{color:var(--ink);font-weight:500}
+
+  .for-whom{background:var(--bg-soft);border-radius:12px;padding:22px 26px;margin-top:8px}
+  .for-whom ul{list-style:none}
+  .for-whom li{padding:7px 0 7px 26px;position:relative}
+  .for-whom li::before{content:'✦';position:absolute;left:0;color:var(--gold);top:8px;font-size:.85rem}
+
+  .includes{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+  .inc{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:20px 22px}
+  .inc .h{font-family:'Noto Serif TC',serif;color:var(--terra);font-size:1.05rem;margin-bottom:10px}
+  .inc ul{list-style:none;font-size:.95rem;color:var(--ink-soft);line-height:1.9}
+
+  /* invitation */
+  .invite{background:linear-gradient(135deg,var(--ocean),var(--ocean-deep));color:#fff;border-radius:14px;padding:38px 28px;text-align:center;margin:8px 0}
+  .invite .label{font-size:.78rem;letter-spacing:.3em;opacity:.85;text-transform:uppercase;margin-bottom:12px}
+  .invite h2{color:#fff;font-size:1.9rem;margin-bottom:10px}
+  .invite p{opacity:.95;max-width:380px;margin:0 auto}
+
+  /* pricing */
+  .pricing{background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:8px}
+  .prow{display:grid;grid-template-columns:90px 1fr auto;gap:14px;padding:16px 22px;border-bottom:1px solid var(--line);align-items:center}
+  .prow:last-child{border-bottom:none}
+  .prow.head{background:var(--bg-soft);font-family:'Noto Serif TC',serif;font-size:.78rem;color:var(--terra);letter-spacing:.15em;text-transform:uppercase}
+  .pname{font-family:'Noto Serif TC',serif;font-size:1.05rem}
+  .pdesc{font-size:.9rem;color:var(--ink-soft)}
+  .pval{font-family:'Noto Serif TC',serif;color:var(--terra);font-size:1.15rem;text-align:right;white-space:nowrap}
+  .pval small{font-size:.7rem}
+  .pnote{font-size:.9rem;color:var(--ink-soft);margin-top:14px}
+
+  /* booking */
+  .booking{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:26px;margin-top:8px;text-align:center}
+  .booking .qr{width:170px;height:170px;border:1px solid var(--line);border-radius:8px;margin-bottom:18px}
+  .booking .h{font-family:'Noto Serif TC',serif;color:var(--terra);font-size:1.2rem;margin-bottom:10px}
+  .booking p{font-size:.96rem;color:var(--ink-soft)}
+  .btn{display:inline-block;margin-top:16px;background:var(--terra);color:#fff;text-decoration:none;font-size:1.05rem;font-weight:500;padding:14px 40px;border-radius:999px;letter-spacing:.04em;transition:background .2s,transform .2s}
+  .btn:hover{background:var(--terra-deep);transform:translateY(-2px)}
+
+  footer{text-align:center;padding:44px 24px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:.92rem}
+  footer .ig{color:var(--terra);font-weight:500;text-decoration:none}
+  footer .oneness{margin-top:16px;font-style:italic;font-size:.85rem;color:var(--terra)}
+
+  @media(max-width:560px){
+    .hero h1{font-size:2.2rem}
+    .hero{padding:56px 0 48px}
+    .includes{grid-template-columns:1fr}
+    .prow{grid-template-columns:1fr auto;gap:6px}
+    .prow .pdesc{grid-column:1 / -1;order:3}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="wave">∼ ∼ ∼</div>
+    <div class="eyebrow">Sending love from Zushi</div>
+    <h1>逗子妙生活</h1>
+    <div class="en">Zushi Mi Life</div>
+    <p class="sub">把我不在的家、把我所愛的逗子日常，<br>留給願意停下來的妳。</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section>
+    <div class="quote">
+      搬到了海邊，常常我們一下課就到海邊去走走，看著大海那樣的廣闊無垠。也常常看著孩子們赤腳的在沙灘、草地、大自然上面奔跑，都讓我感覺到非常的合一、融合與舒服。<br><br>
+      現在的生活好愜意，真的會讓人不想要工作。一切的步調比之前更慢、也更容易親近自然。<br><br>
+      感謝土地、大海、夕陽、還有這邊純真的人們。
+      <span class="attr">── Milliya｜2026.4.21 於逗子</span>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="title">關於逗子妙生活</h2>
+    <p>2026 年春天，我搬到了逗子（Zushi）── 日本神奈川的一個沿海小鎮，離東京一小時。</p>
+    <p>當我不在逗子的時候，我想把這個剛安頓好的小窩，留給我認識的、願意停下來慢慢生活的朋友。這不是民宿，是<strong>「朋友的家」</strong> ── 多了一份信任、多了一份在地的真實，少了一份觀光感。</p>
+    <p>未來，我也想在這裡發展親子體驗、台日交流、媽媽喘息的小團體 ── 一切從這個小小的空房之約開始。</p>
+  </section>
+
+  <section>
+    <h2 class="title">這個地方適合誰</h2>
+    <div class="for-whom">
+      <ul>
+        <li>我的朋友、客戶，或經由介紹來的妳</li>
+        <li>嚮往慢生活、想親近海與自然的妳</li>
+        <li>想體驗日本「不是觀光客行程」的真實在地的妳</li>
+        <li>帶小孩想找一個自然教育環境的家庭</li>
+        <li>台日候鳥型旅人 ── 像我一樣兩地飛的妳</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="title">空房之約包含什麼</h2>
+    <div class="includes">
+      <div class="inc">
+        <div class="h">✅ 含</div>
+        <ul>
+          ・WiFi · 寢具 · 清潔<br>
+          ・基本廚房用品<br>
+          ・逗子在地推薦清單<br>
+          ・LINE 隨時聯絡
+        </ul>
+      </div>
+      <div class="inc">
+        <div class="h">⌁ 不含</div>
+        <ul>
+          ・餐飲<br>
+          ・交通與接機<br>
+          ・活動門票<br>
+          ・派對／大團體聚會<br>
+          ・寵物入住（個案討論）
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="invite">
+      <div class="label">First Invitation · 空房之約</div>
+      <h2>第一個邀請</h2>
+      <p>逗子妙生活對外開放的第一波，<br>就從妳開始 🌊</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="title">訂房方案</h2>
+    <div class="pricing">
+      <div class="prow head"><div>方案</div><div>適合</div><div style="text-align:right">價格</div></div>
+      <div class="prow"><div class="pname">短宿</div><div class="pdesc">1–2 晚 · 周末小逃</div><div class="pval">NT$1,000<small>/晚</small></div></div>
+      <div class="prow"><div class="pname">慢宿</div><div class="pdesc">3–6 晚 · 真正放慢</div><div class="pval">NT$900<small>/晚</small></div></div>
+      <div class="prow"><div class="pname">月宿</div><div class="pdesc">7+ 晚 · 候鳥試住</div><div class="pval">NT$700<small>/晚</small></div></div>
+    </div>
+    <p class="pnote">
+      ✦ 適合 1–4 人（2 人最舒適）｜每多 1 人 +NT$100/晚<br>
+      ✦ 在地規劃線上討論 60 分鐘：另計（可選）<br>
+      ✦ 房屋確切位置於預訂後私訊告知
+    </p>
+  </section>
+
+  <section>
+    <h2 class="title">怎麼預訂</h2>
+    <div class="booking">
+      <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Fforms.gle%2FKbLEqeMzC7GZXTxEA&size=400x400&margin=10" alt="預訂表單 QR Code">
+      <div class="h">填預訂表單</div>
+      <p>填完後我會在 48 小時內透過妳留的方式聯繫妳，<br>確認日期、人數、需求與付款方式。</p>
+      <a class="btn" href="https://forms.gle/KbLEqeMzC7GZXTxEA" target="_blank" rel="noopener">前往預訂表單 →</a>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div>📍 神奈川縣・逗子市（確切地址預訂後告知）</div>
+  <div style="margin-top:8px">私訊我聊聊 ・ IG <a class="ig" href="https://www.instagram.com/zushi.mi.life/" target="_blank" rel="noopener">@zushi.mi.life</a></div>
+  <div class="oneness">Oneness · 我們跟這個世界、跟土地都是連結在一起的<br>Sending love from Zushi 💗</div>
+</footer>
+
+</body>
+</html>
